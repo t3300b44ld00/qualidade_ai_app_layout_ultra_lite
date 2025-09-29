@@ -1,0 +1,261 @@
+/* ---------- base ---------- */
+* {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 11pt;
+  color: #1c2a39;
+}
+
+QWidget#Header {
+  background: qlineargradient(x1:0,y1:0,x2:1,y2:0, stop:0 #e9f0ff, stop:1 #f4f8ff);
+  border-bottom: 1px solid #dde6ff;
+}
+
+#Title {
+  font-size: 24pt;
+  font-weight: 800;
+  color: #2b6dff;
+  letter-spacing: 0.5px;
+}
+#Subtitle {
+  font-size: 11pt;
+  color: #4e6a8a;
+}
+
+/* ---------- barras e cartões ---------- */
+QFrame#PageBar {
+  background: #f7fbff;
+  border: 1px solid #e6eefb;
+  border-radius: 10px;
+  padding: 10px;
+}
+QFrame#TableCard {
+  background: #ffffff;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* ---------- botões laterais ---------- */
+QPushButton[class="SideBtn"] {
+  background: #186ad8;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+QPushButton[class="SideBtn"]:hover { background: #2a7cf0; }
+QPushButton[class="SideBtn"]:disabled { background: #a8c4ef; color: #eaf1ff; }
+
+/* ---------- botões padrões com "kind" ---------- */
+QPushButton[kind="primary"] {
+  background: #2b6dff;
+  color: #ffffff;
+  border: 1px solid #2b6dff;
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+}
+QPushButton[kind="primary"]:hover { background: #3a7bff; }
+
+QPushButton[kind="outline"] {
+  background: #ffffff;
+  color: #2b6dff;
+  border: 1.5px solid #2b6dff;
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+}
+QPushButton[kind="outline"]:hover { background: #f0f6ff; }
+
+QPushButton[kind="danger"] {
+  background: #ffecee;
+  color: #c62828;
+  border: 1px solid #ffccd1;
+  border-radius: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+}
+QPushButton[kind="danger"]:hover { background: #ffdadd; }
+
+/* ---------- campos ---------- */
+QLineEdit, QComboBox {
+  background: #ffffff;
+  border: 1px solid #dfe7f3;
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+QLineEdit:focus, QComboBox:focus { border-color: #2b6dff; }
+
+QTableWidget {
+  gridline-color: #e9eef6;
+  alternate-background-color: #fbfdff;
+}
+QHeaderView::section {
+  background: #f4f8ff;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid #e6eefb;
+  color: #2b3b52;
+  font-weight: 600;
+}
+/* Campos do formulário dentro de cards */
+QFrame#Card QLineEdit,
+QFrame#Card QComboBox,
+QFrame#Card QDateEdit,
+QFrame#Card QSpinBox {
+    min-height: 34px;
+    padding: 6px 10px;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 8px;
+    background: #fff;
+}
+
+QFrame#Card QPlainTextEdit {
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 10px;
+    padding: 8px 10px;
+    background: #fff;
+}
+
+QLabel[class="Field"] {
+    color: #2f2f2f;
+}
+
+/* Títulos das páginas, mesma cor do logo Enepol */
+#PageBar QLabel#PageTitle {
+    color: #0A6CFF;         /* azul do logotipo */
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+/* ====== Side buttons: texto em destaque ====== */
+QPushButton[class="SideBtn"] {
+    font-weight: 700;        /* negrito */
+    font-size: 14.5px;       /* levemente maior, sem estourar o botão */
+}
+
+/* mantém o negrito também no hover/pressed/focus */
+QPushButton[class="SideBtn"]:hover,
+QPushButton[class="SideBtn"]:pressed,
+QPushButton[class="SideBtn"]:focus {
+    font-weight: 700;
+}
+/* ===== Título da página (ex.: "Teste Qualidade") ===== */
+#PageBar {
+    /* dá um respiro e um traço discreto para separar o título do conteúdo */
+    min-height: 64px;
+    border-bottom: 1px solid rgba(10,108,255,0.12); /* azul Enepol bem suave */
+}
+
+#PageBar QLabel#PageTitle {
+    color: #0A6CFF;          /* cor do logo Enepol */
+    font-weight: 800;        /* bem em negrito */
+    font-size: 24px;         /* maior */
+    letter-spacing: .2px;
+    padding: 6px 14px;       /* “pill” ao redor do texto */
+    border-radius: 10px;
+    background: rgba(10,108,255,0.08);        /* destaque leve atrás do texto */
+    border: 1px solid rgba(10,108,255,0.20);  /* contorno sutil */
+}
+
+/* mantém o destaque em foco/hover sem mudar cor */
+#PageBar QLabel#PageTitle:hover,
+#PageBar QLabel#PageTitle:focus {
+    background: rgba(10,108,255,0.10);
+    border-color: rgba(10,108,255,0.28);
+}
+/* ===== Título da página (ex.: "Teste Qualidade") ===== */
+#PageBar {
+    /* dá um respiro e um traço discreto para separar o título do conteúdo */
+    min-height: 64px;
+    border-bottom: 1px solid rgba(10,108,255,0.12); /* azul Enepol bem suave */
+}
+
+#PageBar QLabel#PageTitle {
+    color: #0A6CFF;          /* cor do logo Enepol */
+    font-weight: 800;        /* bem em negrito */
+    font-size: 24px;         /* maior */
+    letter-spacing: .2px;
+    padding: 6px 14px;       /* “pill” ao redor do texto */
+    border-radius: 10px;
+    background: rgba(10,108,255,0.08);        /* destaque leve atrás do texto */
+    border: 1px solid rgba(10,108,255,0.20);  /* contorno sutil */
+}
+
+/* mantém o destaque em foco/hover sem mudar cor */
+#PageBar QLabel#PageTitle:hover,
+#PageBar QLabel#PageTitle:focus {
+    background: rgba(10,108,255,0.10);
+    border-color: rgba(10,108,255,0.28);
+}
+/* ===== Título da página (ex.: "Teste Qualidade") ===== */
+#PageBar {
+    /* dá um respiro e um traço discreto para separar o título do conteúdo */
+    min-height: 64px;
+    border-bottom: 1px solid rgba(10,108,255,0.12); /* azul Enepol bem suave */
+}
+
+#PageBar QLabel#PageTitle {
+    color: #0A6CFF;          /* cor do logo Enepol */
+    font-weight: 800;        /* bem em negrito */
+    font-size: 24px;         /* maior */
+    letter-spacing: .2px;
+    padding: 6px 14px;       /* “pill” ao redor do texto */
+    border-radius: 10px;
+    background: rgba(10,108,255,0.08);        /* destaque leve atrás do texto */
+    border: 1px solid rgba(10,108,255,0.20);  /* contorno sutil */
+}
+
+/* mantém o destaque em foco/hover sem mudar cor */
+#PageBar QLabel#PageTitle:hover,
+#PageBar QLabel#PageTitle:focus {
+    background: rgba(10,108,255,0.10);
+    border-color: rgba(10,108,255,0.28);
+}
+/* ===== Título da página (ex.: "Teste Qualidade") ===== */
+#PageBar {
+    /* dá um respiro e um traço discreto para separar o título do conteúdo */
+    min-height: 64px;
+    border-bottom: 1px solid rgba(10,108,255,0.12); /* azul Enepol bem suave */
+}
+
+#PageBar QLabel#PageTitle {
+    color: #0A6CFF;          /* cor do logo Enepol */
+    font-weight: 800;        /* bem em negrito */
+    font-size: 24px;         /* maior */
+    letter-spacing: .2px;
+    padding: 6px 14px;       /* “pill” ao redor do texto */
+    border-radius: 10px;
+    background: rgba(10,108,255,0.08);        /* destaque leve atrás do texto */
+    border: 1px solid rgba(10,108,255,0.20);  /* contorno sutil */
+}
+
+/* mantém o destaque em foco/hover sem mudar cor */
+#PageBar QLabel#PageTitle:hover,
+#PageBar QLabel#PageTitle:focus {
+    background: rgba(10,108,255,0.10);
+    border-color: rgba(10,108,255,0.28);
+}
+/* ===== PageBar sem pílula: mostra só o texto ===== */
+#PageBar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+    padding: 0;
+}
+
+#PageBar QLabel#PageTitle {
+    background: transparent;   /* sem fundo */
+    border: none;              /* sem borda */
+    padding: 0;                /* sem “almofada” */
+    color: #0A6CFF;            /* azul do logo */
+    font-weight: 800;          /* bem em negrito */
+    font-size: 24px;           /* ajuste se quiser maior/menor */
+    letter-spacing: .2px;
+}
+/* Subtítulo central do header (“Inspeção em Linha”) em cinza do logo */
+#Header QLabel#Subtitle {
+    color: #9AA0A6;      /* cinza do logo Enepol */
+    font-weight: 700;
+    font-size: 17px;
+}
